@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Barlow Condensed", "Barlow", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #0b0c0b;
+  --color-foreground: #eceee8;
+  --color-card: #131513;
+  --color-card-foreground: #eceee8;
+  --color-popover: #181b18;
+  --color-popover-foreground: #eceee8;
+  --color-primary: #d6dbd2;
+  --color-primary-foreground: #121412;
+  --color-secondary: #1c1f1c;
+  --color-secondary-foreground: #eceee8;
+  --color-muted: #1c1f1c;
+  --color-muted-foreground: #9aa396;
+  --color-accent: #222622;
+  --color-accent-foreground: #eceee8;
+  --color-destructive: #c45c4a;
+  --color-destructive-foreground: #f4ecea;
+  --color-border: #2a2e2a;
+  --color-input: #2a2e2a;
+  --color-ring: #d6dbd2;
+  --color-whatsapp: #2f7a4a;
+  --color-whatsapp-foreground: #f3faf5;
+  --color-warn: #c4a574;
+  --color-warn-foreground: #1a1610;
+  --color-live: #6fbf86;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius: 12px;
+
+  --shadow-border: 0 0 0 1px rgb(255 255 255 / 0.08);
+  --shadow-border-hover: 0 0 0 1px rgb(255 255 255 / 0.13);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100dvh;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes live-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.72);
+  }
+}
+
+.live-dot {
+  animation: live-pulse 1.8s var(--ease-in-out, ease-in-out) infinite;
+}
+
+@keyframes board-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.board-enter {
+  animation: board-enter 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}

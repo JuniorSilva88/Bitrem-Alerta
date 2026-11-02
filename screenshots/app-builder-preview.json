@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Bitrem Alerta",
+      "hasCanvas": false,
+      "bodyTextLen": 5555,
+      "bodyTextHash": "e6bae2396b6e37898c7fe298363a1f10131ed24e1e96404ead5c23579fdeb7cc",
+      "bodyTextPrefix": "Bitrem Alerta Ao vivo Grãos para bitrem · MS, SP e PR Alertas Ma",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Bitrem Alerta",
+      "hasCanvas": false,
+      "bodyTextLen": 4922,
+      "bodyTextHash": "8e607038da6b4c44bc7d182ada2d2e5c613dd01443038d4a9eab91443832ec63",
+      "bodyTextPrefix": "Bitrem Alerta Ao vivo Grãos para bitrem · MS, SP e PR Mato Gross",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
