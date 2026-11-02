@@ -209,7 +209,6 @@ export function AlertQueue() {
   const loads = useFreight((s) => s.loads);
   const phone = useFreight((s) => s.rule.phone);
   const markSent = useFreight((s) => s.markSent);
-  const markAllSent = useFreight((s) => s.markAllSent);
   const clearSent = useFreight((s) => s.clearSent);
   const pending = alerts.filter((a) => !a.sent);
   const sent = alerts.filter((a) => a.sent);
@@ -235,7 +234,6 @@ export function AlertQueue() {
     if (!pending.length) return;
     const first = pending[0]!;
     send(first.id, first.loadId);
-    markAllSent();
   }
 
   return (

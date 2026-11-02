@@ -78,7 +78,6 @@ type FreightState = {
   setRule: (patch: Partial<AlertRule>) => void;
   select: (id: string | null, opts?: { mobile?: boolean }) => void;
   markSent: (alertId: string) => void;
-  markAllSent: () => void;
   clearSent: () => void;
   tick: () => void;
   ingest: (load: Load, announce: boolean) => void;
@@ -147,12 +146,6 @@ export const useFreight = create<FreightState>((set, get) => ({
     const alerts = get().alerts.map((a) =>
       a.id === alertId ? { ...a, sent: true } : a,
     );
-    set({ alerts });
-    persistAlerts(alerts);
-  },
-
-  markAllSent: () => {
-    const alerts = get().alerts.map((a) => ({ ...a, sent: true }));
     set({ alerts });
     persistAlerts(alerts);
   },

@@ -516,7 +516,7 @@ export function Dashboard() {
           </section>
         </div>
 
-        <aside className="hidden lg:flex lg:flex-col">
+        <aside className="hidden lg:sticky lg:top-20 lg:flex lg:max-h-[calc(100dvh-6rem)] lg:self-start lg:flex-col lg:overflow-y-auto">
           <div className="rounded-xl bg-card shadow-[var(--shadow-border)]">
             <div className="p-5 pb-0">
               <p className="text-xs tracking-wide text-muted-foreground">Como rastrear</p>

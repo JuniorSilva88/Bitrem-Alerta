@@ -110,7 +110,7 @@ export function LoadCard({ load, now }: { load: Load; now: number }) {
         <Button
           variant="secondary"
           size="sm"
-          className="flex-1"
+          className="flex-1 scroll-mt-20"
           onClick={openDetail}
         >
           Detalhe
